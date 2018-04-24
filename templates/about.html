@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}<link rel="stylesheet" href="{% static 'css/about.css' %}">{% endblock %}
+{% block content %}
+  <div class="about">
+    <h1>网站说明</h1>
+    <ul>
+      <li>做这个网站，是为了对学习的 Python 以及 Django 知识做一个练习</li>
+      <li>网站没有参考任何教程，从零开始开发，遇坑无数，通过 google 解决</li>
+      <li>当然，也有很多问题没解决，做了很多妥协</li>
+      <li>仅仅会了一点点皮毛而已，编程真TM难啊</li>
+      <li>网站中发布的电影榜单，仅代表我个人的非常主观的喜好</li>
+    </ul>
+
+    <h1>网站主要功能</h1>
+    <ul>
+      <li>能注册、登录、登出</li>
+      <li>登录用户能发表留言</li>
+      <li>登录用户能提交电影</li>
+      <li>登录用户提交的电影，如果不符合管理员的口味，可以后台删除</li>
+      <li>登录用户可以对电影进行点赞加分</li>
+      <li>每次点赞电影加一分，不能重复点赞</li>
+      <li>电影按得分排序</li>
+    </ul>
+  </div>
+
+{% endblock %}

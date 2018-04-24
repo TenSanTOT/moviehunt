@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block css %}<link rel="stylesheet" href="{% static 'css/recommend.css' %}">{% endblock %}
+
+{% block content %}
+    <form method="POST" enctype="multipart/form-data" class="recommend-form">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        <div class="fieldWrapper">
+            {{ form.name.errors }}
+            <label for="{{ form.name.id_for_label }}">电影名:</label>
+            {{ form.name }}
+        </div>
+        <div class="fieldWrapper">
+          {{ form.country.errors }}
+          <label for="{{ form.country.id_for_label }}">国家:</label>
+          {{ form.country }}
+        </div>
+        <div class="fieldWrapper">
+            {{ form.description.errors }}
+            <label for="{{ form.description.id_for_label }}">一句话描述:</label>
+            {{ form.description }}
+        </div>
+        <div class="fieldWrapper">
+            {{ form.cover.errors }}
+            <label for="{{ form.cover.id_for_label }}">电影封面:</label>
+            {{ form.cover }}
+        </div>
+        <button type="submit" class="submit">发布</button>
+    </form>
+{% endblock content %}

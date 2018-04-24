@@ -1,0 +1,40 @@
+.film-item{
+  display: flex;
+  margin-top: 50px;
+}
+
+.vote-area{
+  margin-right: 40px;
+  text-align: center;
+  color: #60b862;
+}
+
+.vote-area button{
+  width: 50px;
+  height: 30px;
+  background: none;
+  border-style: none;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  border: 1px solid #60b862;
+  color: #60b862;
+  outline: none;
+  cursor: pointer;
+}
+
+.vote-area button:hover{
+  background: #60b862;
+  color: #fff;
+}
+
+.film-area{
+  width: 100%;
+}
+
+.film-area a{
+  color: #16192d;
+}
+
+.film-area a:hover{
+  color: #60b862;
+}

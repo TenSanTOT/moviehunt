@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}<link rel="stylesheet" href="{% static 'css/home.css' %}">{% endblock %}
+{% block content %}
+{% for film in object_list %}
+    {% if film.show %}
+      <div class="film-item">
+        <div class="vote-area">
+          <form  action="{% url 'vote' film.pk %}" method="POST">
+            {% csrf_token %}
+            <button type="submit" name="button">▲</button>
+          </form>
+          <p>{{ film.vote }}</p>
+        </div>
+
+        <div class="film-area">
+          <h2><a href="{% url 'film_detail' film.pk %}">{{ film.name }}</a></h2>
+          <span class="shy">{{ film.author }}</span>
+          <span class="shy">{{ film.added }}</span>
+        </div>
+
+      </div>
+    {% endif %}
+  {% endfor %}
+{% endblock %}

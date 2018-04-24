@@ -1,0 +1,12 @@
+<!-- templates/signup.html -->
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}<link rel="stylesheet" href="{% static 'css/signup.css' %}">{% endblock %}
+
+{% block content %}
+<form method="post" class="signup-form">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">注册</button>
+</form>
+{% endblock %}

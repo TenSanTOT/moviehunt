@@ -1,0 +1,21 @@
+.about{
+  margin-top: 50px;
+}
+
+.about h1{
+  font-size: 1.3em;
+
+}
+
+.about ul {
+  list-style: circle;
+  margin-top: 20px;
+  margin-bottom: 60px;
+  margin-left: 40px;
+}
+
+.about ul li{
+  margin: 15px 0;
+  font-size: 0.85em;
+  color: #60b862;
+}

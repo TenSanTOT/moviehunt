@@ -1,0 +1,39 @@
+.film-item{
+  margin-top: 40px;
+}
+
+.film-item img{
+  width: 100%;
+}
+
+.comment-form{
+  margin-top: 40px;
+}
+
+.comment-form button{
+  width: 180px;
+  background: #60b862;
+  color: #fff;
+  padding: 8px 0;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.comment{
+  margin-top: 40px;
+}
+
+.comment-area{
+  margin-bottom: 150px;
+}
+
+textarea{
+  width: 100%;
+  height: 70px;
+  outline: none;
+  margin: 10px 0 20px 0;
+  padding: .7em;
+}

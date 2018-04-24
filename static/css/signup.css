@@ -1,0 +1,48 @@
+.signup-form label{
+  font-size: 0.8em;
+  margin-bottom: 10px;
+  display: block;
+  color: #60b862;
+}
+
+.signup-form p{
+  margin: 30px 0;
+}
+
+.signup-form input{
+  border: 1px solid #60b862;
+  outline: none;
+  padding: .7em .7em;
+  border-radius: 2px;
+  width: 30%;
+}
+
+.signup-form button{
+  width: 30%;
+  background: #60b862;
+  color: #fff;
+  padding: 8px 0;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.gotosignup{
+  border: 1px solid #60b862;
+  padding: 2px 16px;
+  border-radius: 2px;
+  margin-right: 10px;
+}
+
+.signup-form ul {
+  list-style: none;
+  font-size: 0.7em;
+  color:#acbae8;
+}
+
+.signup-form .helptext{
+  font-size: 0.7em;
+  color:#acbae8;
+}

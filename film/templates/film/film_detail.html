@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block css %}<link rel="stylesheet" href="{% static 'css/detail.css' %}">{% endblock %}
+
+{% block content %}
+  <div class="film-item">
+    <img src="{{ film.cover.url }}" alt="">
+    <h2>{{ film.name }}</h2>
+    <p>制片国家/地区：{{ film.country }}</p>
+    <p>一句话推荐：{{ film.description }}</p>
+  </div>
+
+  <form method="POST" action='.' class="comment-form">
+      {% csrf_token %}
+      <label for="{{ form.text.id_for_label }}" class="shy">留言：</label>
+      {{ form.text }}
+      <button type="submit">发 布</button>
+  </form>
+
+  <div class="comment-area">
+    {% for comment in film.comment.all %}
+        <div class="comment">
+          <p>{{ comment.text|linebreaks }}</p>
+          <span class="shy">{{ comment.author }}</span>
+          <span class="date shy">{{ comment.added }}</span>
+        </div>
+    {% empty %}
+        <p>还没有评论 :(</p>
+    {% endfor %}
+  </div>
+
+
+
+{% endblock content %}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  {% block css %}{% endblock %}
+  <title>电影清单</title>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1 class="logo">
+        <a href="{% url 'home' %}">我爱的电影</a>
+      </h1>
+      <div class="user">
+        <a href="{% url 'recommend' %}" class="shy intro">＋推荐电影</a>
+        <a href="{% url 'about' %}" class="shy intro">功能介绍</a>
+        {% if user.is_authenticated %}
+          <span class="username shy">{{ user.username }}</span>
+          <span><a href="{% url 'logout' %}" class="logout shy">登出</a></span>
+        {% else %}
+          <a href="{% url 'login' %}" class="login shy">登录</a>
+          <a href="{% url 'signup' %}" class="signup shy">注册</a>
+        {% endif %}
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    {% block content %}
+    {% endblock %}
+  </div>
+
+</body>
+</html>
