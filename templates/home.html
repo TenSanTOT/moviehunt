@@ -12,14 +12,30 @@
           </form>
           <p>{{ film.vote }}</p>
         </div>
-
         <div class="film-area">
           <h2><a href="{% url 'film_detail' film.pk %}">{{ film.name }}</a></h2>
           <span class="shy">{{ film.author }}</span>
           <span class="shy">{{ film.added }}</span>
         </div>
-
       </div>
     {% endif %}
   {% endfor %}
+
+  {% block pagination %}
+  {% if is_paginated %}
+      <div class="pagination">
+          <span class="page-links">
+              {% if page_obj.has_previous %}
+                  <a href="{{ request.path }}?page={{ page_obj.previous_page_number }}">上页</a>
+              {% endif %}
+              <span class="page-current">
+                  {{ page_obj.number }}/{{ page_obj.paginator.num_pages }}
+              </span>
+              {% if page_obj.has_next %}
+                  <a href="{{ request.path }}?page={{ page_obj.next_page_number }}">下页</a>
+              {% endif %}
+          </span>
+      </div>
+  {% endif %}
+{% endblock %}
 {% endblock %}

@@ -38,3 +38,17 @@
 .film-area a:hover{
   color: #60b862;
 }
+.page-current{
+  color: #949494;
+  font-size: 0.7em;
+  margin-right: 10px;
+}
+.pagination a{
+  margin-right: 10px;
+  font-size: 0.7em;
+  color: #16192d;
+}
+.pagination {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}

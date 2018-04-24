@@ -8,6 +8,7 @@ from django.utils import timezone
 class FilmListView(ListView):
     model = Film
     template_name = 'home.html'
+    paginate_by = 10
 
 def vote(request, pk):
     film = get_object_or_404(Film, pk=pk)
