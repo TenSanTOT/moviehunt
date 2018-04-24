@@ -46,3 +46,14 @@
   font-size: 0.7em;
   color:#acbae8;
 }
+
+@media screen and (max-width: 800px) {
+  .signup-form input{
+    width: 100%;
+  }
+
+  .signup-form button{
+    width: 100%;
+  }
+
+}

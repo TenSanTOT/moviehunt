@@ -13,7 +13,7 @@ SECRET_KEY = '=6%vq8)_ug9$l0g0!^tr)x$%!)0tnp(4ezf(e+v^c6m&k#1zcr'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['guozhan.pythonanywhere.com']
+ALLOWED_HOSTS = ['guozhan.pythonanywhere.com','127.0.0.1']
 
 
 # Application definition

@@ -7,8 +7,10 @@
   <div class="film-item">
     <img src="{{ film.cover.url }}" alt="">
     <h2>{{ film.name }}</h2>
-    <p>制片国家/地区：{{ film.country }}</p>
-    <p>一句话推荐：{{ film.description }}</p>
+    <span>制片国家/地区：</span>
+    <p>{{ film.country }}</p>
+    <span>一句话推荐：</span>
+    <p>{{ film.description }}</p>
   </div>
 
   <form method="POST" action='.' class="comment-form">

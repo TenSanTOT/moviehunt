@@ -75,3 +75,9 @@ header .logo{
 .username{
   margin-right: 10px;
 }
+
+@media screen and (max-width: 800px) {
+	.container{
+    width: 85%;
+  }
+}

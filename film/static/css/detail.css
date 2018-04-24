@@ -6,6 +6,18 @@
   width: 100%;
 }
 
+.film-item h2{
+  margin: 20px 0;
+}
+.film-item span{
+  color: #60b862;
+  font-size: 0.8em;
+}
+.film-item p{
+  margin: 5px 0 30px 0;
+  font-size: 0.8em;
+}
+
 .comment-form{
   margin-top: 40px;
 }
@@ -36,4 +48,10 @@ textarea{
   outline: none;
   margin: 10px 0 20px 0;
   padding: .7em;
+}
+
+@media screen and (max-width: 800px) {
+  .comment-form button{
+    width: 100%;
+  }
 }
